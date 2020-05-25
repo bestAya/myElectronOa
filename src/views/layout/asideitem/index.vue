@@ -55,7 +55,7 @@ export default {
         { id: 3, title: "财务管理", icon: "el-icon-bank-card", path: "/" },
         { id: 4, title: "风控管理", icon: "el-icon-data-line", path: "/" },
         { id: 5, title: "人事管理", icon: "el-icon-user", path: "/" },
-        { id: 6, title: "工作台", icon: "el-icon-table-lamp", path: "/" },
+        { id: 6, title: "工作台", icon: "el-icon-table-lamp", path: "/workbench" },
         { id: 7, title: "应用", icon: "el-icon-menu", path: "/app" },
       ],
       active: 1

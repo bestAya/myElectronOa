@@ -3,9 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-.wrapper{
+
+.wrapper {
     box-sizing: border-box;
 }
+
+.Single_Omit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 
 /*tips标签*/
 
@@ -21,16 +29,45 @@
     cursor: pointer;
     height: 15px;
     line-height: 17px;
+    font-style: normal;
 }
-.drag_box{
+
+.tips_danger {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: #f56c6c;
+}
+
+.tips_preoss {
+    background-color: #ecf5ff;
+    color: #409eff;
+    border-color: #ecf5ff;
+}
+
+.tips_success {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    color: #67c23a;
+}
+
+.tips_danger {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: #f56c6c;
+}
+
+.drag_box {
     position: relative;
 }
-.m_t{
+
+.m_t {
     padding: 0 10px;
     box-sizing: border-box;
     position: relative;
 }
-.drag_box::before,.m_t::before{
+
+.drag_box::before,
+.m_t::before {
     content: ' ';
     position: absolute;
     top: 0;

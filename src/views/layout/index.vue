@@ -94,7 +94,7 @@ export default {
             text-align: center;
             line-height: 30px;
             cursor: pointer;
-            -webkit-app-region: no-drag;
+            // -webkit-app-region: no-drag;
             &:hover {
               background: #22283d;
               color: #fff;
