@@ -8,13 +8,7 @@
         <asideItem class="asideItem"></asideItem>
       </el-aside>
       <el-container class="view_box">
-        <div class="drag_hader">
-          <div>
-            <span class="el-icon-minus" @click="minimize"></span>
-            <span class="el-icon-full-screen" @click="maximize"></span>
-            <span class="el-icon-close" @click="close"></span>
-          </div>
-        </div>
+        <CloseHead />
         <el-main>
           <router-view class="router-view" />
         </el-main>
@@ -25,27 +19,16 @@
 
 <script>
 import asideItem from "./asideitem/index.vue";
-const { ipcRenderer } = require("electron");
+import CloseHead from "@/components/closeheader/index.vue";
 export default {
-  components: { asideItem },
+  components: { asideItem, CloseHead },
   props: {},
   data() {
     return {};
   },
   watch: {},
-  computed: {
-  },
-  methods: {
-    minimize() {
-      ipcRenderer.send("minimize");
-    },
-    close() {
-      ipcRenderer.send("close");
-    },
-    maximize() {
-      ipcRenderer.send("maximize");
-    },
-  },
+  computed: {},
+
   created() {},
   mounted() {},
 };
@@ -74,34 +57,7 @@ export default {
     .view_box {
       display: flex;
       flex-direction: column;
-      .drag_hader {
-        height: 30px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        -webkit-app-region: drag;
 
-        div {
-          display: flex;
-          height: 100%;
-          align-items: center;
-          line-height: 100%;
-          span {
-            display: block;
-            height: 100%;
-            width: 30px;
-            font-size: 16px;
-            text-align: center;
-            line-height: 30px;
-            cursor: pointer;
-            // -webkit-app-region: no-drag;
-            &:hover {
-              background: #22283d;
-              color: #fff;
-            }
-          }
-        }
-      }
       .el-main {
         flex: 1;
         padding: 0 !important;

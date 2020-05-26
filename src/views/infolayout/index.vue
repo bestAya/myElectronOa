@@ -8,7 +8,12 @@
             <i slot="suffix" class="suffix">(⌘+k)</i>
             <i slot="prefix" class="suffix el-input__icon el-icon-search"></i>
           </el-input>
-          <el-button size="small" icon="el-icon-plus" circle></el-button>
+          <el-button
+            size="small"
+            @click="openCalendarWindow"
+            icon="el-icon-plus"
+            circle
+          ></el-button>
         </div>
         <!--消息列表-->
         <div class="info_list">
@@ -26,7 +31,7 @@
             </div>
           </div>
           <!--消息-->
-          <div class="info_box">
+          <router-link class="info_box" tag="div" to="/login">
             <el-avatar
               src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
             ></el-avatar>
@@ -40,7 +45,7 @@
               </div>
               <p>这是提升内容</p>
             </div>
-          </div>
+          </router-link>
         </div>
       </div>
       <div class="info_right"></div>
@@ -49,6 +54,7 @@
 </template>
 
 <script>
+const { ipcRenderer } = require("electron");
 export default {
   components: {},
   props: {},
@@ -57,7 +63,17 @@ export default {
   },
   watch: {},
   computed: {},
-  methods: {},
+  methods: {
+    openCalendarWindow() {
+      /* 创建新窗口 */
+      // 定义calendar窗体
+
+      ipcRenderer.send("openCalendarWindow", {
+        options: { width: 400, height: 550 },
+        url: "http://localhost:8081/#/creatwin",
+      });
+    },
+  },
   created() {},
   mounted() {},
 };
@@ -76,7 +92,7 @@ export default {
   height: 100%;
   .info {
     display: flex;
-   height: 100%;
+    height: 100%;
     .info_left {
       width: 296px;
       box-sizing: border-box;
