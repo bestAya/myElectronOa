@@ -70,7 +70,7 @@ export default {
 
       ipcRenderer.send("openCalendarWindow", {
         options: { width: 400, height: 550 },
-        url: "http://localhost:8081/#/creatwin",
+        url: "http://localhost:8080/#/creatwin",
       });
     },
   },
