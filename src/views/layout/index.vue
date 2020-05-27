@@ -47,7 +47,7 @@ export default {
         margin: 20px 0;
         .el-avatar {
           background: #0068ff;
-          box-shadow: 0 0 0 3px #fff;
+          box-shadow:0 0 4px 0 #e2e2e2;
         }
       }
       .asideItem {
@@ -61,7 +61,7 @@ export default {
       .el-main {
         flex: 1;
         padding: 0 !important;
-        background: #f2f2f2;
+        background: #e6ecf3;
       }
     }
 

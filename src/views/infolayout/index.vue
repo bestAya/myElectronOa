@@ -67,10 +67,10 @@ export default {
     openCalendarWindow() {
       /* 创建新窗口 */
       // 定义calendar窗体
-
+      console.log(window.location)
       ipcRenderer.send("openCalendarWindow", {
         options: { width: 400, height: 550 },
-        url: "http://localhost:8080/#/creatwin",
+        url: `${window.location.origin}/#/creatwin`,
       });
     },
   },
