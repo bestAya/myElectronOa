@@ -27,28 +27,29 @@
         >
       </el-menu>
     </div>
-    <div class="per_list">
-      <el-tabs v-model="activeName" type="card">
-        <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-        <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-      </el-tabs>
-      <tree-table
-        ref="recTree"
-        @handlerExpand="handlerExpand"
-        :list.sync="treeDataSource"
-      ></tree-table>
-    </div>
     <div>
-      <router-view class="router-view" />
+      <div class="per_list">
+        <tree-table
+          ref="recTree"
+          @handlerExpand="handlerExpand"
+          :list.sync="treeDataSource"
+        ></tree-table>
+      </div>
+      <div class="per_right">
+        <IndexTree :date="treeDataSource" />
+
+        <router-view class="router-view" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import treeTable from "./pertree/tree-table";
+import IndexTree from "./pertree/index";
 
 export default {
-  components: { treeTable },
+  components: { treeTable, IndexTree },
   data() {
     return {
       activeIndex: "1",
@@ -125,14 +126,25 @@ export default {
   display: flex;
   height: 100%;
   flex-direction: column;
-  .per_list {
+
+  & > div:last-child {
     flex: 1;
-    background: #fff;
-    width: 250px;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 0 0 #ccc;
-    margin: 10px;
+    display: flex;
+    box-sizing: border-box;
+    .per_list {
+      background: #fff;
+      width: 250px;
+      padding: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 0 0 0 #ccc;
+      margin: 10px;
+    }
+    .per_right{
+      flex: 1;
+      padding: 10px 0;
+      text-align: left;
+    }
+
   }
   .el-tab-pane {
     height: 100%;

@@ -1,23 +1,16 @@
 <template>
   <div class="wapper">
-    <div class="td-title no_before">
-      <span class="el-icon-caret-right tree-open"></span>
-      <div class="is_letter no_before">
-        <div>
-          <i class="el-icon-office-building"></i><span>金融科技中心</span>
-        </div>
-        <div class="is_child_box td-title">
-          <span class="tree-close tree-open"></span>
-          <div class="is_letter no_before">
-            <i class=""></i><span>金融科技中心</span>
+    <div class="item_tree" v-for="(item,index) in date" :key="index">
+      <div class="item_tree_child">
+        <div class="item_less">
+          <div class="item_less_header">
+            <span class="el-icon-school"></span>
+            <div><i></i><span>{{item.label}}</span></div>
+          </div>
+          <div class="opstion_box" v-if="item.children">
+            <ItemTree :date="item.children"></ItemTree>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="td-title">
-      <span class="tree-close tree-open"></span>
-      <div class="is_letter no_before">
-        <i class=""></i><span>金融科技中心</span>
       </div>
     </div>
   </div>
@@ -25,87 +18,118 @@
 
 <script>
 export default {
+  name:'ItemTree',
+  props:{
+    date:{
+      type:Array,
+      default:function(){
+        return []
+      }
+    }
+  },
   data() {
     return {
-      trerDate: {},
+      data: [],
+
     };
   },
+  created(){
+    console.log(this.date)
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.no_before::before {
-  display: none;
-}
-.no_after::after {
-  display: none;
-}
-.is_letter {
+.item_tree {
+  display: flex;
+  flex-direction: column;
+  padding-left: 32px;
   position: relative;
+  &:last-of-type {
+    &::before {
+      display: none;
+    }
+  }
+  &:first-child {
+    &::before {
+      // height: calc(100% - 10px);
+    }
+  }
 
   &::before {
     content: " ";
     position: absolute;
-    top: -20px;
-    left: 5px;
-    width: 5px;
-    height: 40px;
-    border-left: 2px dotted #ccc;
-    z-index: 0;
+    top: -4px;
+    left: 7px;
+    border-left: 1px dashed #ccc;
+    height: 100%;
   }
-  &::after {
-    content: " ";
-    position: absolute;
-    bottom: -20px;
-    left: 5px;
-    width: 1px;
-    height: 40px;
-    border-left: 2px dotted #ccc;
-    // width: 1px;
-    z-index: 1;
-  }
-}
-.wapper {
-  padding: 20px;
-  .td-title {
-    min-height: 40px;
-    position: relative;
+  // &::after {
+  //   content: " ";
+  //   position: absolute;
+  //   top: -4px;
+  //   left: 7px;
+  //   border-left: 1px dashed #ccc;
+  //   height:100%;
+  // }
+  .item_less {
     display: flex;
-    align-items: center;
-    & > span {
-      display: block;
-      height: 20px;
+    margin-left: -8px;
+    flex-direction: column;
+    position: relative;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 14px;
+      left: -13px;
+      border-top: 1px dashed #ccc;
       width: 20px;
-      margin-left: -4px;
-      position: relative;
-      font-size: 16px;
-      cursor: pointer;
-      z-index: 99;
     }
-    .is_letter {
-      display: flex;
-      flex-direction: column;
-      div:first-child {
-        flex: 1;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        line-height: 40px;
-        i {
-          display: block;
-          width: 10px;
-          height: 20px;
-          line-height: 20px;
-          margin-right: 10px;
-          background: #fff;
-        }
-        span {
-          font-size: 12px;
-        }
-      }
-      .is_child_box {
-      }
+  }
+  .item_less_header {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: -16px;
+      left: -17px;
+      border-left: 1px dashed #ccc;
+      height: 100%;
     }
+  }
+  .item_tree_child {
+    position: relative;
+    // &::before {
+    //   content: " ";
+    //   position: absolute;
+    //   top: 15px;
+    //   left: -25px;
+    //   border-left: 1px dashed #ccc;
+    //   height: 50%;
+    // }
+    // &::after {
+    //   content: " ";
+    //   position: absolute;
+    //   top: -4px;
+    //   left: 7px;
+    //   border-left: 1px solid #000;
+    //   height: 75%;
+    // }
+  }
+  .opstion_box {
+    position: relative;
+    // &::before {
+    //   content: " ";
+    //   position: absolute;
+    //   top: -4px;
+    //   left: 7px;
+    //   border-left: 1px dashed #ccc;
+    //   height: 75%;
+    // }
   }
 }
 </style>

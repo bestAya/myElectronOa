@@ -62,6 +62,7 @@ export default {
         flex: 1;
         padding: 0 !important;
         background: #e6ecf3;
+        border-top: 1px solid #ccc;
       }
     }
 
