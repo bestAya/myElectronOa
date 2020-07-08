@@ -1,6 +1,6 @@
 {
   "name": "electron-vue-helloworld",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,9 +10,9 @@
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
-    "pushpatch":"打补丁",
-    "pushminor":"构建小版本",
-    "pushmajor":"构建大版本",
+    "pushpatch": "打补丁",
+    "pushminor": "构建小版本",
+    "pushmajor": "构建大版本",
     "patch": "npm version patch && git push origin master && git push origin --tags",
     "minor": "npm version minor && git push origin master && git push origin --tags",
     "major": "npm version major && git push origin master && git push origin --tags"
