@@ -1,0 +1,4 @@
+owner: bestAya
+repo: myElectronOa
+provider: github
+updaterCacheDirName: electron-vue-helloworld-updater

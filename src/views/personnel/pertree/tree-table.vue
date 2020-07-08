@@ -97,6 +97,7 @@ export default {
 .tree-table {
   width: 100%;
   position: relative;
+  float: left;
   .center {
     text-align: center;
   }

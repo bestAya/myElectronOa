@@ -1,0 +1,8 @@
+version: 0.1.0
+files:
+  - url: electron-vue-helloworld-Setup-0.1.0.exe
+    sha512: MQmY2eG341S7dqvy1SJs9TVVFsX2Nd/25VvFGU2ldc0AVfox/sRWEvTLLb7CVHwTbsiCXalq5oh+Bx2kv5AKVA==
+    size: 48874514
+path: electron-vue-helloworld-Setup-0.1.0.exe
+sha512: MQmY2eG341S7dqvy1SJs9TVVFsX2Nd/25VvFGU2ldc0AVfox/sRWEvTLLb7CVHwTbsiCXalq5oh+Bx2kv5AKVA==
+releaseDate: '2020-07-07T09:42:50.519Z'

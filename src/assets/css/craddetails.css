@@ -1,0 +1,90 @@
+.order_box {
+    font-family: "Hiragino Sans GB";
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 4px;
+  }
+  .type_box,
+  .order_box {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .order_box_centnt {
+    padding: 20px 10px;
+  }
+  /* .order_box_centnt > .el-row {
+    display: flex;
+    align-items: center;
+  } */
+  .order_box_top {
+    /* border-right: 1px solid #dcdfe6; */
+    padding: 10px;
+  }
+  
+  .order_title {
+    padding: 10px 15px;
+    position: relative;
+    border-bottom: 1px solid #dcdfe6;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .order_title:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 20px;
+    width: 3px;
+    margin-top: -10px;
+    background: #080808;
+  }
+  .order_box_top_ms {
+    padding: 15px;
+    background: #409eff;
+    border-radius: 4px;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+  }
+  
+  .order_box_top_ms li {
+    padding: 10px 0;
+    color: #ffffff;
+  }
+  .order_box_top_ms li > span {
+    font-size: 15px;
+    opacity: 0.69;
+    float: right;
+  }
+  .order_box_top_ms li > label {
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+  }
+  .type_box .order_box {
+    height: 100%;
+  }
+  .order_title_btn {
+    float: right;
+  }
+  .order_title_btn > a {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  @media screen and (min-width: 1200px) {
+    .order_box_top > .el-row,
+    .type_box > .el-row {
+      display: flex;
+    }
+    .order_box_top > .el-col,
+    .type_box > .el-col {
+      flex: 1;
+    }
+  }
+  

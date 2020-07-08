@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["wagelist"],{e65c:function(e,n,t){"use strict";t.r(n);var a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[e._v(" 123123 ")])},c=[],s={},i=s,l=t("9ca4"),r=Object(l["a"])(i,a,c,!1,null,"3aa29185",null);n["default"]=r.exports}}]);
+//# sourceMappingURL=wagelist.f6399374.js.map

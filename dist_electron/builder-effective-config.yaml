@@ -1,0 +1,17 @@
+directories:
+  output: dist_electron
+  buildResources: build
+  app: dist_electron/bundled
+files:
+  - filter:
+      - '**'
+extends: null
+win:
+  icon: ./public/favicon.png
+  target: nsis
+mac:
+  icon: ./public/favicon.png
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 6.1.12

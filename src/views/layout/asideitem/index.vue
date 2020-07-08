@@ -13,7 +13,6 @@
           :to="item.path"
           tag="div"
           class="asideItem_card"
-          exact
           active-class="router-link-exact-activ"
         >
           <span :class="item.icon"></span>

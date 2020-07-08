@@ -9,6 +9,7 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    redirect: "/workbench",
     children: [
       {
         path: "/info",
@@ -29,6 +30,29 @@ const routes = [
             /* webpackChunkName: "todo" */
             "../views/todo/index.vue"
           ),
+        redirect: "/todo/list",
+        children: [
+          {
+            path: "list",
+            name: "list",
+            meta: { title: "待办列表" },
+            component: () =>
+              import(
+                /* webpackChunkName: "list" */
+                "../views/todo/list.vue"
+              ),
+          },
+          {
+            path: "overlist",
+            name: "overlist",
+            meta: { title: "已办列表" },
+            component: () =>
+              import(
+                /* webpackChunkName: "overlist" */
+                "../views/todo/list.vue"
+              ),
+          },
+        ],
       },
       {
         path: "/app",
@@ -59,6 +83,38 @@ const routes = [
             /* webpackChunkName: "personnel" */
             "../views/personnel/index.vue"
           ),
+        children: [
+          {
+            path: "wagelist",
+            name: "wagelist",
+            meta: { title: "工资计算" },
+            component: () =>
+              import(
+                /* webpackChunkName: "wagelist" */
+                "../views/personnel/wagelist.vue"
+              ),
+          },
+          {
+            path: "atteandance",
+            name: "atteandance",
+            meta: { title: "考勤管理" },
+            component: () =>
+              import(
+                /* webpackChunkName: "atteandance" */
+                "../views/personnel/atteandance.vue"
+              ),
+          },
+          {
+            path: "employee",
+            name: "employee",
+            meta: { title: "员工管理" },
+            component: () =>
+              import(
+                /* webpackChunkName: "employee" */
+                "../views/personnel/employee.vue"
+              ),
+          },
+        ],
       },
     ],
   },

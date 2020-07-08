@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["creatwin"],{d731:function(e,n,a){"use strict";a.r(n);var s=function(){var e=this,n=e.$createElement,a=e._self._c||n;return a("div",[a("CloseHead"),e._v(" asjdhjashjd ")],1)},t=[],c=a("2b80"),l={components:{CloseHead:c["a"]}},o=l,d=a("9ca4"),r=Object(d["a"])(o,s,t,!1,null,null,null);n["default"]=r.exports}}]);
+//# sourceMappingURL=creatwin.b6a416fd.js.map

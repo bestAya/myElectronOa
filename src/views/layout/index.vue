@@ -10,10 +10,15 @@
       <el-container class="view_box">
         <CloseHead />
         <el-main>
-          <router-view class="router-view" />
+          <el-scrollbar tag="div">
+            <router-view class="router-view" />
+          </el-scrollbar>
         </el-main>
       </el-container>
     </el-container>
+    <el-backtop
+      target=".page-component__scroll .el-scrollbar__wrap"
+    ></el-backtop>
   </div>
 </template>
 
@@ -44,10 +49,10 @@ export default {
       flex-direction: column;
 
       .avatar_header {
-        margin: 20px 0;
+        margin: 20px auto;
         .el-avatar {
           background: #0068ff;
-          box-shadow:0 0 4px 0 #e2e2e2;
+          box-shadow: 0 0 4px 0 #e2e2e2;
         }
       }
       .asideItem {
@@ -57,18 +62,21 @@ export default {
     .view_box {
       display: flex;
       flex-direction: column;
-
+      .el-scrollbar {
+        height: 100%;
+      }
       .el-main {
         flex: 1;
         padding: 0 !important;
         background: #e6ecf3;
         border-top: 1px solid #ccc;
+        overflow: hidden;
       }
     }
-
     .router-view {
       width: 100%;
     }
   }
 }
+
 </style>
