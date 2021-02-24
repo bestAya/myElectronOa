@@ -6,36 +6,54 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "minified": true
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
   "appid": "wx82dbd349edff5bb0",
   "projectname": "newColor",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
-    "plugin": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
       "list": []
     },
     "game": {
       "list": []
     },
-    "gamePlugin": {
-      "list": []
-    },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/goods/details",
-          "pathName": "pages/goods/details",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/my/index",
-          "pathName": "pages/my/index",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }

@@ -42,4 +42,7 @@
   height: 481rpx;
   float: left;
 }
+.details-title.data-v-71614060 {
+  white-space: initial;
+}
 

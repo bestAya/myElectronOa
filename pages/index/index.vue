@@ -44,7 +44,7 @@
 			</view>
 			<view>
 				<view class="goods-list-box">
-					<view class="goods-list-item-box" v-for="(item,index) in 6" :key="index">
+					<view class="goods-list-item-box" v-for="(item,index) in 6" :key="index" @click="handeRouter(item)">
 						<view class="goods-list-item-wrap">
 							<view>
 								<image src="../../static/img/2.jpg">
@@ -82,6 +82,11 @@
 
 		},
 		methods: {
+			handeRouter(item){
+				wx.navigateTo({
+					url:'/pages/goods/details'
+				})
+			},
 
 		}
 	}

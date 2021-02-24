@@ -16,7 +16,7 @@
 						<text class="text-price text-xxl text-bold text-orange">108.00</text>
 						<text class="text-xs text-gray">101人购买</text>
 					</view>
-					<view class="text-lg">
+					<view class="text-lg details-title">
 						夏季薄款渔夫帽女韩版潮百搭遮脸日系防晒遮阳帽网红格子太阳帽子
 					</view>
 				</view>
@@ -145,5 +145,8 @@
 	}
 	.VerticalNav{
 		// margin-bottom: 55px;
+	}
+	.details-title{
+		white-space: initial;
 	}
 </style>

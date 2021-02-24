@@ -4,8 +4,19 @@
 		<view class="pubuBox">
 			<view class="pubuItem">
 				<view class="item-masonry" v-for="(item, index) in comList" :key="index">
-					<image :src="item.img" mode="widthFix"></image>
-					<view class="listtitle"> <!-- 这是没有高度的父盒子（下半部分） -->
+					<image src="../../static/img/b2.jpg" mode="widthFix"></image>
+					<view class="padding-tb-xs padding-lr-sm">
+						<view class="text-cut text-df padding-bottom-sm">韩版女式帽子</view>
+						<text class="text-sm text-gray">已售1200</text>
+						<view class="flex justify-between padding-bottom-sm padding-tb-xs ">
+							<view class="text-price  text-bold  align-center">
+								<text>600.00</text>
+							</view>
+							<text class="iconfont icon-jiahao2fill  text-yellow text-xl"></text>
+						</view>
+					</view>
+					 <!-- 这是没有高度的父盒子（下半部分） -->
+					<!-- <view class="listtitle">
 						<view class="listtitle1">{{ item.name }}</view>
 						<view class="listtitle2">
 							<text class="listtitle2son">￥</text>
@@ -14,7 +25,7 @@
 						<view class="listtitle3">
 							来自莫成尘的旗舰店
 						</view>
-					</view>
+					</view> -->
 				</view>
 			</view>
 		</view>
@@ -23,6 +34,7 @@
 
 <script>
 	export default {
+		
 		data() {
 			return {
 				comList: [{
@@ -31,7 +43,7 @@
 						commdityPrice: 100
 					}, {
 						img: 'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
-						name: '商品名称会在超出两行时候自动折叠',
+						name: '商品名称会在超出两行',
 						commdityPrice: 100
 					},
 					{
@@ -44,14 +56,15 @@
 						commdityPrice: 100
 					}, {
 						img: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
-						name: 'vue的H5页面也是如此使用',
+						name: 'vue的H5页面也是如此使用123123123123奥术大师大所大所阿是大师大师的奥术大师',
 						commdityPrice: 100
 					}
 				], //商品列表
 			};
 		},
+		
 		onShow() {},
-		onLoad() {},
+		
 		methods: {},
 
 	};

@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/tag/index",
+    "pages/cat/index",
     "pages/my/index",
     "pages/goods/details"
   ],
@@ -24,8 +25,14 @@
         "selectedIconPath": "static/tabbar/people_fill.png"
       },
       {
+        "pagePath": "pages/cat/index",
+        "text": "全部",
+        "iconPath": "static/tabbar/shop.png",
+        "selectedIconPath": "static/tabbar/shop_fill.png"
+      },
+      {
         "pagePath": "pages/tag/index",
-        "text": "百货",
+        "text": "动态",
         "iconPath": "static/tabbar/shop.png",
         "selectedIconPath": "static/tabbar/shop_fill.png"
       },
