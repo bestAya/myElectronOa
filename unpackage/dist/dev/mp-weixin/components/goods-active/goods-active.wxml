@@ -1,0 +1,1 @@
+<block wx:if="{{flag}}"><view class="mask" catchtouchmove="preventTouchMove" data-event-opts="{{[['tap',[['hide',['$event']]]]]}}" catchtap="__e"><view data-event-opts="{{[['tap',[['e0',['$event']]]]]}}" class="goods-active" catchtap="__e"><slot></slot></view></view></block>

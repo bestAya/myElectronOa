@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "good-active": "/components/goods-active/goods-active"
+  }
+}

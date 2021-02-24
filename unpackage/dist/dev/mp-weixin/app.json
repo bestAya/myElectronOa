@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/tag/index",
+    "pages/my/index",
+    "pages/goods/details"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#d9dade",
+    "selectedColor": "#070707",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/people.png",
+        "selectedIconPath": "static/tabbar/people_fill.png"
+      },
+      {
+        "pagePath": "pages/tag/index",
+        "text": "百货",
+        "iconPath": "static/tabbar/shop.png",
+        "selectedIconPath": "static/tabbar/shop_fill.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/people.png",
+        "selectedIconPath": "static/tabbar/people_fill.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
