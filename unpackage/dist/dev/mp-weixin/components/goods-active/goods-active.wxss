@@ -57,6 +57,7 @@
 	width: 100%;
 	background: #fff;
 	z-index: 9001;
-	border-radius: 14rpx;
+	-webkit-border-radius: 14rpx;
+	        border-radius: 14rpx;
 }
 

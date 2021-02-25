@@ -3,7 +3,7 @@
     <!--  #ifdef  MP-WEIXIN -->
     <view
       v-for="(item, index) of list"
-      class="waterfalls-list"
+      class="waterfalls-list shadow"
       :key="item[idKey]"
       :id="'waterfalls-list-id-' + item[idKey]"
       :ref="'waterfalls-list-id-' + item[idKey]"
@@ -157,6 +157,7 @@ $border-radius: 6px;
     position: absolute;
     background-color: #fff;
     border-radius: $border-radius;
+	box-shadow: 0px 0px 28rpx 1rpx rgba(78, 101, 153, 0.14);
     // 防止刚开始渲染时堆叠在第一幅图的地方
     left: calc(-50% - var(--offset));
     .waterfalls-list-image {

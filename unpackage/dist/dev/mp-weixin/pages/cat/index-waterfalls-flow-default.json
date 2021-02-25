@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "index-waterfalls-flow-default": "/pages/cat/index-waterfalls-flow-default",
-    "waterfalls-flow": "/components/maramlee-waterfalls-flow/maramlee-waterfalls-flow"
-  }
-}
