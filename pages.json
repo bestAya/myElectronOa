@@ -19,6 +19,12 @@
 			}
 		},
 		{
+			"path": "pages/shop/index",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
 			"path": "pages/my/index",
 			"style": {
 				"navigationBarTitleText": "我的"
@@ -54,6 +60,12 @@
 				"selectedIconPath": "static/tabbar/shop_fill.png"
 			},
 			{
+				"pagePath": "pages/shop/index",
+				"text": "购物车",
+				"iconPath": "static/tabbar/shop.png",
+				"selectedIconPath": "static/tabbar/shop_fill.png"
+			},
+			{
 				"pagePath": "pages/my/index",
 				"text": "我的",
 				"iconPath": "static/tabbar/people.png",
@@ -64,7 +76,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#F8F8F8"
 	}
 }

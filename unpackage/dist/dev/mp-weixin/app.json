@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/tag/index",
     "pages/cat/index",
+    "pages/shop/index",
     "pages/my/index",
     "pages/goods/details"
   ],
@@ -10,7 +11,7 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
@@ -33,6 +34,12 @@
       {
         "pagePath": "pages/tag/index",
         "text": "动态",
+        "iconPath": "static/tabbar/shop.png",
+        "selectedIconPath": "static/tabbar/shop_fill.png"
+      },
+      {
+        "pagePath": "pages/shop/index",
+        "text": "购物车",
         "iconPath": "static/tabbar/shop.png",
         "selectedIconPath": "static/tabbar/shop_fill.png"
       },

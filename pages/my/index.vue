@@ -1,13 +1,13 @@
 <template>
 	<view>
-		<view class="cu-list menu-avatar">
+		<view class="cu-list card-menu menu-avatar margin-top">
 			<view class="cu-item">
 				<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
 					<view class="cu-tag badge">99+</view>
 				</view>
 				<view class="content">
 					<view class="text-grey">
-						<view class="text-cut">瓦洛兰之盾-塔里克</view>
+						<view class="text-cut text-xl">瓦洛兰之盾-塔里克</view>
 						<view class="cu-tag round bg-orange sm">战士</view>
 					</view>
 					<view class="text-gray text-sm flex">
@@ -22,17 +22,32 @@
 					</view> -->
 			</view>
 		</view>
-		<view class="bg-white padding">
-			<view class="flex">
-				<view class="flex-sub bg-grey padding-sm margin-xs radius">1</view>
-				<view class="flex-sub bg-grey padding-sm margin-xs radius">1</view>
+		<view class="cu-list card-menu bg-white margin-top">
+			<view class="cu-list menu sm-border">
+				<view class="cu-item arrow">
+					<view class="content">
+						<text class="text-bold text-xl">我的订单</text>
+					</view>
+				</view>
+			</view>
+			<view class="cu-list grid col-4 no-border card-order">
+				<view class="cu-item" v-for="(item,index) in 4" :key="index">
+					<view class="cuIcon-location">
+						<view class="cu-tag badge" v-if="item!=0">
+							<block v-if="item!=1">{{item>99?'99+':item}}</block>
+						</view>
+					</view>
+					<text>代付款</text>
+				</view>
 			</view>
 		</view>
-		<view class="cu-list menu sm-border">
-			<view class="cu-item arrow" v-for="item in 10">
+
+
+		<view class="cu-list menu sm-border card-menu margin-top">
+			<view class="cu-item arrow" v-for="item in 5">
 				<view class="content">
-					<text class="cuIcon-circlefill text-grey"></text>
-					<text class="text-grey">图标 + 标题</text>
+					<text class="cuIcon-location"></text>
+					<text class="">地址管理</text>
 				</view>
 			</view>
 		</view>
@@ -64,4 +79,10 @@
 		}
 	}
 </script>
-<style></style>
+<style>
+	
+	.card-order{
+		padding: 0 !important;
+		margin-top: 0 !important;
+	}
+</style>

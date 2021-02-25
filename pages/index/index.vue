@@ -15,7 +15,7 @@
 					<view class="Newcat-banner image  ">
 						<image src="../../static/img/1.png"></image>
 					</view>
-					<view class="Newcat-list padding-xs " v-for="item in 2">
+					<view class="Newcat-list padding-xs " v-for="item in 2" key="item">
 						<view class="Newcat-list-item padding flex bg-white radius">
 							<image src="../../static/img/2.jpg" mode=""></image>
 							<view class="Newcat-list-item-pr">

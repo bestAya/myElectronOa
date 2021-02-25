@@ -1,71 +1,80 @@
 <template>
-	<view class="Index">
-		<!-- 瀑布流布局列表 -->
-		<view class="pubuBox">
-			<view class="pubuItem">
-				<view class="item-masonry" v-for="(item, index) in comList" :key="index">
-					<image src="../../static/img/b2.jpg" mode="widthFix"></image>
-					<view class="padding-tb-xs padding-lr-sm">
-						<view class="text-cut text-df padding-bottom-sm">韩版女式帽子</view>
-						<text class="text-sm text-gray">已售1200</text>
-						<view class="flex justify-between padding-bottom-sm padding-tb-xs ">
-							<view class="text-price  text-bold  align-center">
-								<text>600.00</text>
-							</view>
-							<text class="iconfont icon-jiahao2fill  text-yellow text-xl"></text>
-						</view>
+	<view class="Index bg-white">
+		<!-- <view class="">
+			<scroll-view class="recommend-item flex padding" scroll-x="true" :enable-flex="true"
+			 scroll-left="120">
+				<view class="recommend-item-box flex padding-tb-xs"  style="display: inline-block; width: 25%;" v-for="(item,index) in 10" :key="index">
+					<view class="cat-list shadow-warp padding-tb round" >
+						<text class="text-sm">鸭舌帽</text>
+						<image src="../../static/img/cat1.png" mode=""></image>
 					</view>
-					 <!-- 这是没有高度的父盒子（下半部分） -->
-					<!-- <view class="listtitle">
-						<view class="listtitle1">{{ item.name }}</view>
-						<view class="listtitle2">
-							<text class="listtitle2son">￥</text>
-							{{ item.commdityPrice }}
-						</view>
-						<view class="listtitle3">
-							来自莫成尘的旗舰店
-						</view>
-					</view> -->
 				</view>
+			</scroll-view>
+			
+		</view> -->
+		<!--搜索-->
+		<view class="flex justify-between padding  align-center">
+			<view class="text-bold seach-list">
+				<text class="padding-lr-sm text-xxl">推荐</text>
+				<text class="padding-lr-sm text-gray">好价</text>
+				<text class="padding-lr-sm text-gray">热卖</text>
+				<text class="padding-lr-sm text-gray">新品</text>
+			</view>
+			<view class="">
+				筛选
 			</view>
 		</view>
+
+		<!-- 瀑布流布局列表 -->
+		<scroll-view class="VerticalNav nav" lower-threshold="200" @scrolltolower="scrollToLower" scroll-y
+		 scroll-with-animation style="height:calc(100vh - 60px)">
+			<waterfallsFlow :list="comList">
+				<template v-slot:default="{item}">
+					<view v-for="(item, index) of comList" :key="index" slot="slot{{index}}">
+						<image :src="item % 2 ? '../../static/img/b2.jpg':'../../static/img/2.jpg'" mode="widthFix"></image>
+						<view class="padding-tb-xs padding-lr-sm">
+							<view class="text-cut text-df padding-bottom-sm">韩版女式帽子</view>
+							<text class="text-sm text-gray">已售1200</text>
+							<view class="flex justify-between padding-bottom-sm padding-tb-xs ">
+								<view class="text-price  text-bold  align-center">
+									<text>600.00</text>
+								</view>
+								<text class="iconfont icon-jiahao2fill  text-yellow text-xl"></text>
+							</view>
+						</view>
+					</view>
+					<!-- 此处添加插槽内容 -->
+					<!-- <view class="cnt">
+		           <view class="title">{{item.title}}</view>
+		           <view class="text">{{item.text}}</view>
+		         </view> -->
+					
+				</template>
+			</waterfallsFlow>
+
+		</scroll-view>
 	</view>
 </template>
 
 <script>
+	import waterfallsFlow from "@/components/maramlee-waterfalls-flow/maramlee-waterfalls-flow.vue";
 	export default {
-		
+		components: {
+			waterfallsFlow
+		},
 		data() {
 			return {
-				comList: [{
-						img: "http://pic1.sc.chinaz.com/Files/pic/pic9/202002/zzpic23346_s.jpg",
-						name: '商品的名称，可以很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长',
-						commdityPrice: 100
-					}, {
-						img: 'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
-						name: '商品名称会在超出两行',
-						commdityPrice: 100
-					},
-					{
-						img: 'http://pic1.sc.chinaz.com/Files/pic/pic9/202002/zzpic23343_s.jpg',
-						name: '只有一行标题时高度为39',
-						commdityPrice: 100
-					}, {
-						img: 'http://pic1.sc.chinaz.com/Files/pic/pic9/202002/zzpic23343_s.jpg',
-						name: '具体样式您可以自定义',
-						commdityPrice: 100
-					}, {
-						img: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
-						name: 'vue的H5页面也是如此使用123123123123奥术大师大所大所阿是大师大师的奥术大师',
-						commdityPrice: 100
-					}
-				], //商品列表
+				comList: [1,2,3,4,5,6], //商品列表
 			};
 		},
-		
+
 		onShow() {},
-		
-		methods: {},
+
+		methods: {
+			scrollToLower() {
+				this.comList = this.comList + 6;
+			},
+		},
 
 	};
 </script>
@@ -143,5 +152,56 @@
 	.Index {
 		width: 100%;
 		height: 100%;
+	}
+
+	.recommend-item {
+		height: 330rpx;
+		width: 100%;
+		white-space: nowrap;
+	}
+
+	.recommend-item-box {
+		width: 25%;
+		display: inline-block;
+	}
+
+	.scroll-view_H,
+	.scroll-view-item_H {
+		height: 136rpx;
+	}
+
+	.scroll-view-item_H {
+		width: 216rpx;
+		margin-right: 20rpx;
+	}
+
+	.cat-ul {
+		width: 100%;
+		white-space: nowrap;
+	}
+
+	.cat-list {
+		// width: 159rpx;
+		// background-color: #007AFF;
+		// height: 120rpx;
+		height: 262rpx;
+		margin: 0 20rpx;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		padding: 1px;
+	}
+
+	.cat-list image {
+		display: block;
+		width: 120rpx;
+		height: 120rpx;
+	}
+
+	.seach-list {
+		flex: 1;
 	}
 </style>

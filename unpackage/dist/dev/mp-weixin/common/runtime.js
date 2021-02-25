@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"pages/index/banner/index":1,"components/goods-active/goods-active":1};
+/******/ 		var cssChunks = {"pages/index/banner/index":1,"components/maramlee-waterfalls-flow/maramlee-waterfalls-flow":1,"components/goods-active/goods-active":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"pages/index/banner/index":"pages/index/banner/index","components/goods-active/goods-active":"components/goods-active/goods-active"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"pages/index/banner/index":"pages/index/banner/index","components/maramlee-waterfalls-flow/maramlee-waterfalls-flow":"components/maramlee-waterfalls-flow/maramlee-waterfalls-flow","components/goods-active/goods-active":"components/goods-active/goods-active"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
