@@ -60,8 +60,7 @@
 	/* height: 450rpx; */
 	background: #fff;
 	overflow: hidden;
-	-webkit-border-radius: 16rpx;
-	        border-radius: 16rpx;
+	border-radius: 16rpx;
 }
 .goods-list-item-wrap view:nth-child(1) image {
 	height: 330rpx;

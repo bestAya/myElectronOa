@@ -28,26 +28,77 @@
 					<view class="content">
 						<text class="text-bold text-xl">我的订单</text>
 					</view>
+					<view class="action">
+						<text class="text-grey text-sm">查看更多</text>
+					</view>
 				</view>
 			</view>
 			<view class="cu-list grid col-4 no-border card-order">
-				<view class="cu-item" v-for="(item,index) in 4" :key="index">
-					<view class="cuIcon-location">
+				<view class="cu-item">
+					<view class="cuIcon-pay">
 						<view class="cu-tag badge" v-if="item!=0">
-							<block v-if="item!=1">{{item>99?'99+':item}}</block>
+							1
 						</view>
 					</view>
-					<text>代付款</text>
+					<text>待付款</text>
+				</view>
+				<view class="cu-item">
+					<view class="cuIcon-send">
+						<view class="cu-tag badge" v-if="item!=0">
+							1
+						</view>
+					</view>
+					<text>待发货</text>
+				</view>
+				<view class="cu-item">
+					<view class="cuIcon-deliver">
+						<view class="cu-tag badge" v-if="item!=0">
+							1
+						</view>
+					</view>
+					<text>待收货</text>
+				</view>
+				<view class="cu-item">
+					<view class="cuIcon-refund">
+						<view class="cu-tag badge" v-if="item!=0">
+							1
+						</view>
+					</view>
+					<text>退货/售后</text>
 				</view>
 			</view>
 		</view>
 
 
 		<view class="cu-list menu sm-border card-menu margin-top">
-			<view class="cu-item arrow" v-for="item in 5">
+			<view class="cu-item arrow">
 				<view class="content">
-					<text class="cuIcon-location"></text>
+					<text class="padding-right-sm text-xl iconfont icon-footprint text-bold"></text>
 					<text class="">地址管理</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content">
+					<text class="padding-right-sm text-xl iconfont icon-like text-bold"></text>
+					<text class="">我的收藏</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content">
+					<text class="padding-right-sm text-xl iconfont icon-time text-bold"></text>
+					<text class="">浏览历史</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content">
+					<text class="padding-right-sm text-xl iconfont icon-like text-bold"></text>
+					<text class="">在线客服</text>
+				</view>
+			</view>
+			<view class="cu-item arrow">
+				<view class="content">
+					<text class="padding-right-sm text-xl iconfont icon-people text-bold"></text>
+					<text class="">关于我们</text>
 				</view>
 			</view>
 		</view>
@@ -80,8 +131,7 @@
 	}
 </script>
 <style>
-	
-	.card-order{
+	.card-order {
 		padding: 0 !important;
 		margin-top: 0 !important;
 	}

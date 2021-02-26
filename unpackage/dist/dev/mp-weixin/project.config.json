@@ -25,8 +25,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/cat/index",
-          "pathName": "pages/cat/index",
+          "name": "pages/shop/index",
+          "pathName": "pages/shop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
           "scene": null
         }
       ]
