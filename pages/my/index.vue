@@ -28,43 +28,51 @@
 					<view class="content">
 						<text class="text-bold text-xl">我的订单</text>
 					</view>
-					<view class="action">
+					<navigator url="/pages/order/list" class="action">
 						<text class="text-grey text-sm">查看更多</text>
-					</view>
+					</navigator>
 				</view>
 			</view>
 			<view class="cu-list grid col-4 no-border card-order">
 				<view class="cu-item">
-					<view class="cuIcon-pay">
-						<view class="cu-tag badge" v-if="item!=0">
-							1
+					<navigator url="/pages/order/list?index=0">
+						<view class="cuIcon-pay">
+							<view class="cu-tag badge" v-if="item!=0">
+								1
+							</view>
 						</view>
-					</view>
-					<text>待付款</text>
+						<text>待付款</text>
+					</navigator>
 				</view>
 				<view class="cu-item">
+					<navigator url="/pages/order/list?index=3">
 					<view class="cuIcon-send">
 						<view class="cu-tag badge" v-if="item!=0">
 							1
 						</view>
 					</view>
 					<text>待发货</text>
+					</navigator>
 				</view>
 				<view class="cu-item">
+					<navigator url="/pages/order/list?index=3">
 					<view class="cuIcon-deliver">
 						<view class="cu-tag badge" v-if="item!=0">
 							1
 						</view>
 					</view>
 					<text>待收货</text>
+					</navigator>
 				</view>
 				<view class="cu-item">
+					<navigator url="/pages/order/list?index=3">
 					<view class="cuIcon-refund">
 						<view class="cu-tag badge" v-if="item!=0">
 							1
 						</view>
 					</view>
 					<text>退货/售后</text>
+					</navigator>
 				</view>
 			</view>
 		</view>

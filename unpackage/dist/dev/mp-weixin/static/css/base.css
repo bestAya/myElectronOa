@@ -1,0 +1,7 @@
+	
+	
+	/**信封**/
+	.card-daer {
+		border-bottom: 10rpx solid transparent;
+		background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #fce0ca 0, #fce0ca 12.5%, #fff 0, #fff 25%, #2c4c7b 0, #2c4c7b 37.5%, #fff 0, #fff 50%) 0 /3em 3em;
+	}

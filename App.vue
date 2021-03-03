@@ -18,4 +18,5 @@
 	@import "colorui/icon.css";
 	@import "colorui/animation.css";
 	@import "static/css/icon.css";
+	@import "static/css/base.css";
 </style>

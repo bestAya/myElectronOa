@@ -93,7 +93,11 @@
 			checkboxChange(row) {
 
 			},
-			onSubmit() {},
+			onSubmit() {
+				wx.navigateTo({
+					url:'/pages/goods/subindex'
+				})
+			},
 			//初始化
 			mescrollInit() {},
 			emptyClick() {},

@@ -5,7 +5,9 @@
     "pages/cat/index",
     "pages/shop/index",
     "pages/my/index",
-    "pages/goods/details"
+    "pages/goods/details",
+    "pages/goods/subindex",
+    "pages/order/list"
   ],
   "subPackages": [],
   "window": {

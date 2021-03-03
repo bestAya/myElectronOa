@@ -4910,4 +4910,10 @@ scroll-view.cu-steps .cu-item {
 .icon-people:before {
   content: "\e736";
 }
+/**信封**/
+.card-daer {
+		border-bottom: 10rpx solid transparent;
+		background: -webkit-linear-gradient(white, white) padding-box, -webkit-repeating-linear-gradient(135deg, #fce0ca 0, #fce0ca 12.5%, #fff 0, #fff 25%, #2c4c7b 0, #2c4c7b 37.5%, #fff 0, #fff 50%) 0 /3em 3em;
+		background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #fce0ca 0, #fce0ca 12.5%, #fff 0, #fff 25%, #2c4c7b 0, #2c4c7b 37.5%, #fff 0, #fff 50%) 0 /3em 3em;
+}
 

@@ -1,0 +1,1 @@
+<view><liuyuno-tabs vue-id="439118e4-1" tabData="{{tabs}}" defaultIndex="{{defaultIndex}}" data-event-opts="{{[['^tabClick',[['tabClick']]]]}}" bind:tabClick="__e" bind:__l="__l"></liuyuno-tabs></view>
