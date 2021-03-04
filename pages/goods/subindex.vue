@@ -2,7 +2,7 @@
 	<view class="">
 		<!--内容-->
 		<view class="centent">
-			<view class="card-daer">
+			<view class="card-daer card-bottom">
 				<view class="cu-list menu sm-border  ">
 					<view class="cu-item arrow">
 						<view class="content">
@@ -133,25 +133,4 @@
 		width: 100%;
 	}
 
-	.sub-ul-item {
-		background: #FFFFFF;
-		border-bottom: 1rpx solid #efefef;
-
-		&:last-child {
-			border-bottom: 0;
-		}
-
-		image {
-			display: inline-block;
-			width: 120rpx;
-			height: 120rpx;
-		}
-
-		.sub-ul-item-t {
-			flex: 1;
-			flex-direction: column;
-			justify-content: space-between;
-			margin-left: 30rpx;
-		}
-	}
 </style>

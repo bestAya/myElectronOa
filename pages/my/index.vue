@@ -28,14 +28,14 @@
 					<view class="content">
 						<text class="text-bold text-xl">我的订单</text>
 					</view>
-					<navigator url="/pages/order/list" class="action">
+					<navigator hover-class="none" url="/pages/order/list" class="action">
 						<text class="text-grey text-sm">查看更多</text>
 					</navigator>
 				</view>
 			</view>
 			<view class="cu-list grid col-4 no-border card-order">
 				<view class="cu-item">
-					<navigator url="/pages/order/list?index=0">
+					<navigator hover-class="none" url="/pages/order/list?index=1">
 						<view class="cuIcon-pay">
 							<view class="cu-tag badge" v-if="item!=0">
 								1
@@ -45,33 +45,33 @@
 					</navigator>
 				</view>
 				<view class="cu-item">
-					<navigator url="/pages/order/list?index=3">
-					<view class="cuIcon-send">
-						<view class="cu-tag badge" v-if="item!=0">
-							1
+					<navigator hover-class="none" url="/pages/order/list?index=2">
+						<view class="cuIcon-send">
+							<view class="cu-tag badge" v-if="item!=0">
+								1
+							</view>
 						</view>
-					</view>
-					<text>待发货</text>
+						<text>待发货</text>
 					</navigator>
 				</view>
 				<view class="cu-item">
-					<navigator url="/pages/order/list?index=3">
-					<view class="cuIcon-deliver">
-						<view class="cu-tag badge" v-if="item!=0">
-							1
+					<navigator hover-class="none" url="/pages/order/list?index=3">
+						<view class="cuIcon-deliver">
+							<view class="cu-tag badge" v-if="item!=0">
+								1
+							</view>
 						</view>
-					</view>
-					<text>待收货</text>
+						<text>待收货</text>
 					</navigator>
 				</view>
 				<view class="cu-item">
-					<navigator url="/pages/order/list?index=3">
-					<view class="cuIcon-refund">
-						<view class="cu-tag badge" v-if="item!=0">
-							1
+					<navigator hover-class="none" url="/pages/order/list?index=4">
+						<view class="cuIcon-refund">
+							<view class="cu-tag badge" v-if="item!=0">
+								1
+							</view>
 						</view>
-					</view>
-					<text>退货/售后</text>
+						<text>退货/售后</text>
 					</navigator>
 				</view>
 			</view>
@@ -79,12 +79,12 @@
 
 
 		<view class="cu-list menu sm-border card-menu margin-top">
-			<view class="cu-item arrow">
+			<navigator hover-class="none" url="/pages/my/address" class="cu-item arrow">
 				<view class="content">
 					<text class="padding-right-sm text-xl iconfont icon-footprint text-bold"></text>
 					<text class="">地址管理</text>
 				</view>
-			</view>
+			</navigator>
 			<view class="cu-item arrow">
 				<view class="content">
 					<text class="padding-right-sm text-xl iconfont icon-like text-bold"></text>

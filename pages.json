@@ -47,6 +47,18 @@
 			"style": {
 				"navigationBarTitleText": "我的订单"
 			}
+		},
+		{
+			"path": "pages/my/address",
+			"style": {
+				"navigationBarTitleText": "地址管理"
+			}
+		},
+		{
+			"path": "pages/my/addressfrom",
+			"style": {
+				"navigationBarTitleText": "编辑地址"
+			}
 		}
 	],
 	"tabBar": {

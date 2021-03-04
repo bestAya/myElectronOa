@@ -4912,8 +4912,38 @@ scroll-view.cu-steps .cu-item {
 }
 /**信封**/
 .card-daer {
-		border-bottom: 10rpx solid transparent;
 		background: -webkit-linear-gradient(white, white) padding-box, -webkit-repeating-linear-gradient(135deg, #fce0ca 0, #fce0ca 12.5%, #fff 0, #fff 25%, #2c4c7b 0, #2c4c7b 37.5%, #fff 0, #fff 50%) 0 /3em 3em;
 		background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #fce0ca 0, #fce0ca 12.5%, #fff 0, #fff 25%, #2c4c7b 0, #2c4c7b 37.5%, #fff 0, #fff 50%) 0 /3em 3em;
+}
+.card-bottom{
+		border-bottom: 10rpx solid transparent;
+}
+.card-top{
+		border-top: 10rpx solid transparent;
+}
+.sub-ul-item {
+		background: #FFFFFF;
+		border-bottom: 1rpx solid #efefef;
+}
+.sub-ul-item :last-child {
+		border-bottom: 0;
+}
+.sub-ul-item image {
+		display: inline-block;
+		width: 120rpx;
+		height: 120rpx;
+}
+.sub-ul-item .sub-ul-item-t {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		        flex: 1;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		margin-left: 30rpx;
 }
 

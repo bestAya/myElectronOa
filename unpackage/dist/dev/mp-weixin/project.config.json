@@ -6,38 +6,7 @@
   "setting": {
     "urlCheck": false,
     "es6": true,
-    "enhance": false,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
-    "coverView": true,
-    "nodeModules": true,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": false,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "enableEngineNative": false,
-    "bundle": false,
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minified": true
   },
   "compileType": "miniprogram",
   "libVersion": "",
@@ -56,14 +25,38 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/goods/subindex",
-          "pathName": "pages/goods/subindex",
+          "name": "pages/order/list",
+          "pathName": "pages/order/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shop/index",
+          "pathName": "pages/shop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/order/list",
+          "pathName": "pages/order/list",
           "query": "",
           "scene": null
         },
         {
           "name": "pages/my/index",
           "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/address",
+          "pathName": "pages/my/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/addressfrom",
+          "pathName": "pages/my/addressfrom",
           "scene": null
         }
       ]

@@ -33,29 +33,4 @@
   left: 0;
   width: 100%;
 }
-.sub-ul-item {
-  background: #FFFFFF;
-  border-bottom: 1rpx solid #efefef;
-}
-.sub-ul-item:last-child {
-  border-bottom: 0;
-}
-.sub-ul-item image {
-  display: inline-block;
-  width: 120rpx;
-  height: 120rpx;
-}
-.sub-ul-item .sub-ul-item-t {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  margin-left: 30rpx;
-}
 

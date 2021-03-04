@@ -71,6 +71,22 @@
 					id: 2,
 				}, {
 					id: 3,
+				}, {
+					id: 4,
+				}, {
+					id: 5,
+				}, {
+					id: 6,
+				}, {
+					id: 7,
+				}, {
+					id: 8,
+				}, {
+					id: 9,
+				}, {
+					id: 10,
+				}, {
+					id: 11,
 				}],
 				//下拉刷新的配置参数
 				downOption: {},
@@ -95,7 +111,7 @@
 			},
 			onSubmit() {
 				wx.navigateTo({
-					url:'/pages/goods/subindex'
+					url: '/pages/goods/subindex'
 				})
 			},
 			//初始化

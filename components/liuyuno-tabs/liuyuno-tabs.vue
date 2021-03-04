@@ -42,6 +42,11 @@
 				}
 			},
 		},
+		computed:{
+			activeIndexMode(){
+				return this.activeIndex;
+			}
+		},
 		data() {
 			return {
 				tabList: [],
@@ -84,6 +89,9 @@
 			config(value) {
 				this.updateConfig();
 			},
+			activeIndexMode(value){
+				this.tabClick(value);
+			}
 		},
 		mounted() {
 			this.updateConfig();
