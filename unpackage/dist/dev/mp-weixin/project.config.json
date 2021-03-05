@@ -13,53 +13,21 @@
   "appid": "wx82dbd349edff5bb0",
   "projectname": "newColor",
   "condition": {
-    "plugin": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
       "list": []
     },
     "game": {
-      "list": []
-    },
-    "gamePlugin": {
+      "current": -1,
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/order/list",
-          "pathName": "pages/order/list",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/shop/index",
-          "pathName": "pages/shop/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/order/list",
-          "pathName": "pages/order/list",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/my/index",
-          "pathName": "pages/my/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/my/address",
-          "pathName": "pages/my/address",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/my/addressfrom",
-          "pathName": "pages/my/addressfrom",
-          "scene": null
-        }
-      ]
+      "current": -1,
+      "list": []
     }
   }
 }
