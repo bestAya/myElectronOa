@@ -22,6 +22,29 @@ const routes = [
           ),
       },
       {
+        path: "/order",
+        name: "order",
+        meta: { title: "订单列表" },
+        component: () =>
+          import(
+            /* webpackChunkName: "order" */
+            "../views/order/index.vue"
+          ),
+          redirect: "/order/list",
+          children: [
+            {
+              path: "list",
+              name: "list",
+              meta: { title: "待办列表" },
+              component: () =>
+                import(
+                  /* webpackChunkName: "orderlist" */
+                  "../views/order/list.vue"
+                ),
+            },
+          ]
+      },
+      {
         path: "/todo",
         name: "todo",
         meta: { title: "待办" },

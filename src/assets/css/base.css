@@ -135,3 +135,11 @@
 }
 
 
+.layout_flex{
+  display: flex;
+}
+
+.layout_flex_right_auto{
+  flex: 1;
+}
+

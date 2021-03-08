@@ -48,15 +48,23 @@ export default {
         ];
       },
     },
+    pullFlag:{
+      type:Boolean,
+      default:true,
+    },
   },
   computed: {
     setpullFlag() {
       return this.pullFlag;
     },
   },
+  watch:{
+    setpullFlag(value){
+       this.$emit('update:pullFlag', value);
+    }
+  },
   data() {
     return {
-      pullFlag: true,
     };
   },
 };
@@ -127,6 +135,7 @@ export default {
     align-items: center;
     .active-list {
       background: #f7f7f7;
+      color: #409EFF;
     }
     div {
       display: flex;
